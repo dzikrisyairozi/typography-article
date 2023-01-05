@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-// import "./typography.css";
+import "../typography.css";
 
 const variantsMapping:any = {
   h1: "h1",
