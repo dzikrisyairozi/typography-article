@@ -1,34 +1,58 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import Typography from './component/Typography'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// const Label = ({ text }:any) => {
+//   return <label className="component-label">{text}</label>;
+// };
 
+function App() {
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <header className="App-header">Typography</header> */}
+
+      {/* <Label text={`<Typography variant="h1" />`} /> */}
+      <Typography variant="h1">h1. heading</Typography>
+
+      {/* <Label text={`<Typography variant="h2" />`} /> */}
+      <Typography variant="h2">h2. heading</Typography>
+
+      {/* <Label text={`<Typography variant="h3" />`} /> */}
+      <Typography variant="h3">h3. heading</Typography>
+
+      {/* <Label text={`<Typography variant="h4" />`} /> */}
+      <Typography variant="h4">h4. heading</Typography>
+
+      {/* <Label text={`<Typography variant="h5" />`} /> */}
+      <Typography variant="h5">h5. heading</Typography>
+
+      {/* <Label text={`<Typography variant="h6" />`} /> */}
+      <Typography variant="h6">h6. heading</Typography>
+
+      {/* <Label text={`<Typography variant="subheading1" />`} /> */}
+      <Typography variant="subheading1">Subheading 1</Typography>
+
+      {/* <Label text={`<Typography variant="subheading2" />`} /> */}
+      <Typography variant="subheading2">Subheading 2</Typography>
+
+      {/* <Label text={`<Typography variant="body1" />`} /> */}
+      <Typography variant="body1">BodyText 1</Typography>
+
+      {/* <Label text={`<Typography variant="body2"/>`} /> */}
+      <Typography variant="body2">BodyText 2</Typography>
+
+      {/* <Label text={`<Typography variant="body1" color="primary"/>`} /> */}
+      <Typography variant="body1" color="primary">
+        BodyText 1
+      </Typography>
+
+      {/* <Label text={`<Typography variant="body2" color="error" />`} /> */}
+      <Typography variant="body2" color="error">
+        BodyText 2
+      </Typography>
     </div>
-  )
+  );
 }
 
 export default App
