@@ -1,13 +1,40 @@
 import clsx from 'clsx';
 import React from 'react';
 
+const TypographyVariants = [
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  's1',
+  's2',
+  'b1',
+  'b2',
+] as const;
+const TypographyColor = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'quartenary',
+] as const;
+const TypographyAs = [
+  'p',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+] as Array<React.ElementType>;
+
 type TypographyProps = {
-  as?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  variant?: string;
-  color?: string;
+  as?: typeof TypographyAs[number];
+  variant?: typeof TypographyVariants[number];
+  color?: typeof TypographyColor[number];
   children: React.ReactNode;
 };
-
 const Typography: React.FC<TypographyProps> = ({
   children,
   as = 'p',
