@@ -9,49 +9,66 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">Typography</header> */}
+    <section className=''>
+        <div className='layout flex min-h-screen flex-col items-center justify-center py-20'>
 
-      {/* <Label text={`<Typography variant="h1" />`} /> */}
-      <Typography variant="h1">h1. heading</Typography>
+        <Typography >
+            Base
+          </Typography>
 
-      {/* <Label text={`<Typography variant="h2" />`} /> */}
-      <Typography variant="h2">h2. heading</Typography>
+          <Typography variant='h1' as='h1'>
+            Desktop Headline 1 as h1
+          </Typography>
 
-      {/* <Label text={`<Typography variant="h3" />`} /> */}
-      <Typography variant="h3">h3. heading</Typography>
+          <Typography variant='h2'>Desktop Headline 2</Typography>
+          <Typography variant='h3'>Desktop Headline 3</Typography>
+          <Typography variant='h4'>Desktop Headline 4</Typography>
+          <Typography variant='h5'>Desktop Headline 5</Typography>
+          <Typography variant='h6'>Desktop Headline 6</Typography>
+          <Typography variant='s1'>Subheading 1</Typography>
+          <Typography variant='s2'>Subheading 2</Typography>
+          <Typography variant='b1'>Body Text 1</Typography>
+          <Typography variant='b2'>Body Text 2</Typography>
 
-      {/* <Label text={`<Typography variant="h4" />`} /> */}
-      <Typography variant="h4">h4. heading</Typography>
+          <Typography variant='b2' as='h2'>
+            Body Text 2 as h2
+          </Typography>
 
-      {/* <Label text={`<Typography variant="h5" />`} /> */}
-      <Typography variant="h5">h5. heading</Typography>
+          <Typography variant='b1' as='h1'>
+            Body Text 1 as h1
+          </Typography>
 
-      {/* <Label text={`<Typography variant="h6" />`} /> */}
-      <Typography variant="h6">h6. heading</Typography>
+          <Typography variant='s2' as='h3'>
+            Subheading 2 as h3
+          </Typography>
 
-      {/* <Label text={`<Typography variant="subheading1" />`} /> */}
-      <Typography variant="subheading1">Subheading 1</Typography>
+          <Typography variant='s1' as='h4'>
+            Subheading 1 as h4
+          </Typography>
+          <Typography variant='h6' as='p'>
+            Desktop Headline 6 as p
+          </Typography>
+          <Typography variant='h5' as='h6'>
+            Desktop Headline 5 as h6
+          </Typography>
 
-      {/* <Label text={`<Typography variant="subheading2" />`} /> */}
-      <Typography variant="subheading2">Subheading 2</Typography>
+          <Typography variant='h4' color='quartenary'>
+            Desktop Headline 4 with quartenary color
+          </Typography>
 
-      {/* <Label text={`<Typography variant="body1" />`} /> */}
-      <Typography variant="body1">BodyText 1</Typography>
+          <Typography variant='h3' color='tertiary'>
+            Desktop Headline 3 with tertiary color
+          </Typography>
 
-      {/* <Label text={`<Typography variant="body2"/>`} /> */}
-      <Typography variant="body2">BodyText 2</Typography>
+          <Typography variant='h2' color='secondary'>
+            Desktop Headline 2 with secondary color
+          </Typography>
 
-      {/* <Label text={`<Typography variant="body1" color="primary"/>`} /> */}
-      <Typography variant="body1" color="primary">
-        BodyText 1
-      </Typography>
-
-      {/* <Label text={`<Typography variant="body2" color="error" />`} /> */}
-      <Typography variant="body2" color="error">
-        BodyText 2
-      </Typography>
-    </div>
+          <Typography variant='h1' color='primary'>
+            Desktop Headline 1 with primary color
+          </Typography>
+        </div>
+      </section>
   );
 }
 
