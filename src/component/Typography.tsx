@@ -1,33 +1,46 @@
-import React from "react";
-import cn from "classnames";
-import "../typography.css";
+import clsx from 'clsx';
+import React from 'react';
 
-const variantsMapping:any = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
-  h6: "h6",
-  subheading1: "h6",
-  subheading2: "h6",
-  body1: "p",
-  body2: "p",
+type TypographyProps = {
+  as?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  variant?: string;
+  color?: string;
+  children: React.ReactNode;
 };
 
-const Typography = ({ variant, color, children, ...props }:any) => {
-  const Component = variant ? variantsMapping[variant] : "p";
-
-  return (
-    <Component
-      className={cn({
-        [`typography--variant-${variant}`]: variant,
-        [`typography--color-${color}`]: color,
-      })}
-      {...props}
-    >
-      {children}
-    </Component>
+const Typography: React.FC<TypographyProps> = ({
+  children,
+  as = 'p',
+  variant = 'base',
+  color = 'black',
+  ...rest
+}) => {
+  return React.createElement(
+    as,
+    {
+      className: clsx(
+        [
+          variant === 'h1' && ['text-[3rem] leading-[3rem]'],
+          variant === 'h2' && ['text-[2.25rem] leading-[2.5rem]'],
+          variant === 'h3' && ['text-[1.875rem] leading-[2.25rem]'],
+          variant === 'h4' && ['text-[1.5rem] leading-[2rem]'],
+          variant === 'h5' && ['text-[1.25rem] leading-[1.75rem]'],
+          variant === 'h6' && ['text-[1.175rem] leading-[1.5rem]'],
+          variant === 's1' && ['text-[1rem] leading-[1.5rem]'],
+          variant === 's2' && ['text-[0.875rem] leading-[1.5rem]'],
+          variant === 'b1' && ['text-[1rem]'],
+          variant === 'b2' && ['text-[0.875rem]'],
+        ],
+        [
+          color === 'primary' && ['text-fuchsia-500'],
+          color === 'secondary' && ['text-red-500'],
+          color === 'tertiary' && ['text-green-500'],
+          color === 'quartenary' && ['text-blue-500'],
+        ]
+      ),
+      ...rest,
+    },
+    children
   );
 };
 
