@@ -1,21 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import Typography from './component/Typography'
-import './App.css'
 
-// const Label = ({ text }:any) => {
-//   return <label className="component-label">{text}</label>;
-// };
 
 function App() {
   return (
     <section className=''>
         <div className='layout flex min-h-screen flex-col items-center justify-center py-20'>
-
-        <Typography >
-            Base
-          </Typography>
-
           <Typography variant='h1' as='h1'>
             Desktop Headline 1 as h1
           </Typography>
