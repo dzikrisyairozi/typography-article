@@ -1,4 +1,5 @@
 import Typography from './component/Typography'
+import './App.css'
 
 
 function App() {
